@@ -8,9 +8,10 @@
  */
 void bubble_sort(int array[], size_t size)
 {
-size_t i, j;
-int temp;
-int swip;
+	size_t i, j;
+	int temp;
+	int swip;
+
 	for (i = 0; i < size - 1; i++)
 	{
 		swip = 0;
@@ -25,7 +26,7 @@ int swip;
 				print_array(array, size);
 			}
 		}
-	if (swip == 0)
-	break;
+		if (swip == 0)
+			break;
 	}
 }
