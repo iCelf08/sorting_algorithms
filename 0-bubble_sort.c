@@ -12,16 +12,15 @@ size_t i, j;
 int temp;
 	for (i = 0; i < size - 1; i++)
 	{
-		for (j = 1; j < size; j++)
+		for (j = 0; j < size - i - 1; j++)
+		{
+			if (array[j] > array[j + 1])
 			{
-				if (array[j - 1] > array[j])
-				{
-					temp = array[j - 1];
-					array[j - 1] = array[j];
-					array[j] = temp;		
-				}	
-			print_array(array, size);
+				temp = array[j + 1];
+				array[j + 1] = array[j];
+				array[j] = temp;
 			}
-		
+			print_array(array, size);
+		}
 	}
 }
