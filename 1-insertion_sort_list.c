@@ -9,14 +9,14 @@
 */
 void swap(listint_t *i, listint_t *j)
 {
-    if (j->next)
+if (j->next)
     j->next->prev = i;
-    if (i->prev)
+if (i->prev)
     i->prev->next = j;
-    i->next = j->next;
-    j->prev = i->prev;
-    i->prev = j;
-    j->next = i;
+i->next = j->next;
+j->prev = i->prev;
+i->prev = j;
+j->next = i;
 }
 /**
  * insertion_sort_list - function sorts list elements using the insertion sort algorithm
@@ -26,7 +26,7 @@ void insertion_sort_list(listint_t **list)
 {
     listint_t *current, *next;
     if (list == NULL || *list == NULL || (*list)->next == NULL)
-        return;
+    return;
     current = (*list)->next;
     while (current != NULL)
     {
